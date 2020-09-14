@@ -42,6 +42,8 @@
 
         public DbSet<Judge> Judges { get; set; }
 
+        public DbSet<Attorney> Attorneys { get; set; }
+
         public DbSet<Note> Notes{ get; set; }
 
         public DbSet<Trustee> Trustees { get; set; }

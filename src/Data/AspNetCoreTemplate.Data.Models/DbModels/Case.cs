@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     using AspNetCoreTemplate.Data.Models.Enums;
 
     public class Case
@@ -19,6 +19,7 @@
 
         public int Id { get; set; }
 
+        [ForeignKey("Clients")]
         public int ClientId { get; set; }
 
         public int AttorneyId { get; set; }

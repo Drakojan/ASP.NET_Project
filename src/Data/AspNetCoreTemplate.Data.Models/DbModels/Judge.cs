@@ -1,9 +1,15 @@
 ﻿namespace AspNetCoreTemplate.Data.Models.DbModels
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     public class Judge
     {
+        public Judge()
+        {
+            this.Cases = new HashSet<Case>();
+        }
+
         public int Id { get; set; }
 
         [Required]
@@ -20,6 +26,8 @@
 
         [EmailAddress]
         public string Email { get; set; }
+
+        public ICollection<Case> Cases { get; set; }
 
         public string CourtRoom { get; set; }
     }
